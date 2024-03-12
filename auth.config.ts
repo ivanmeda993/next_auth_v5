@@ -19,6 +19,10 @@ export default {
     // }),
     Credentials({
       async authorize(credentials) {
+        const checkUserRole = credentials.role === "admin";
+
+        console.log("Credentials: ", credentials);
+        console.log("CheckUserRole: ", checkUserRole);
         const validatedFields = LoginSchema.safeParse(credentials);
 
         if (validatedFields.success) {
