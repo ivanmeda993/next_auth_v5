@@ -20,17 +20,15 @@ export const login = async (
     await signIn("credentials", {
       email,
       password,
-      role: "admin",
       redirectTo: callbackUrl || DEFAULT_LOGIN_REDIRECT,
     });
   } catch (error) {
     if (error instanceof AuthError) {
       switch (error.type) {
         case "CredentialsSignin":
-          return { error: "Invalid credentials" };
-
+          return { error: "Invalid credentials!" };
         default:
-          return { error: "An unknown error occurred" };
+          return { error: "Something went wrong!" };
       }
     }
 
