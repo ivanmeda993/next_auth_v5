@@ -4,14 +4,14 @@ import { useRouter } from "next/navigation";
 
 interface LoginButtonProps {
   children: React.ReactNode;
-  mode?: "modal" | "redirect";
+  mode?: "modal" | "redirect",
   asChild?: boolean;
-}
+};
 
 export const LoginButton = ({
   children,
   mode = "redirect",
-  asChild,
+  asChild
 }: LoginButtonProps) => {
   const router = useRouter();
 
@@ -20,7 +20,11 @@ export const LoginButton = ({
   };
 
   if (mode === "modal") {
-    return <span>MODAL</span>;
+    return (
+      <span>
+        TODO: Implement modal
+      </span>
+    )
   }
 
   return (
