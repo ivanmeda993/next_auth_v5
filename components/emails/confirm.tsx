@@ -39,7 +39,7 @@ export const ConfirmEmail = ({ validationCode }: SlackConfirmEmailProps) => (
         <Heading style={h1}>Confirm your email address</Heading>
         <Text style={heroText}>
           Your confirmation code is below - enter it in your open browser window
-          and we'll help you get signed in.
+          and well help you get signed in.
         </Text>
 
         <Section style={codeBox}>
@@ -47,7 +47,7 @@ export const ConfirmEmail = ({ validationCode }: SlackConfirmEmailProps) => (
         </Section>
 
         <Text style={text}>
-          If you didn't request this email, there's nothing to worry about, you
+          If you didnt request this email, theres nothing to worry about, you
           can safely ignore it.
         </Text>
 
